@@ -31,6 +31,8 @@ Changes to the base game from `https://github.com/TheMardy/ThirtySeconds`:
  - Added python csv parser for words lists
  - Removed excess texts and such
  - Other things that I forgot
+ - Upload to GH Pages
+    - Push using `node ./gh-pages.js`
  
 ## Developing, Building and running in production mode
 
