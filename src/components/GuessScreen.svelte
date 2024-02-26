@@ -3,7 +3,7 @@
 	import TimeUp from './TimeUp.svelte'
 	import { fly } from 'svelte/transition';
 
-    let turnSecondsLeft = 30;
+    let turnSecondsLeft = 43;
 
     let gameTimer = setInterval(function(){
             if(turnSecondsLeft <= 1){
@@ -19,7 +19,7 @@
     }
 
     function endTurnPress() {
-        if (confirm('Weet je zeker dat je je beurt wilt eindigen?')) {
+        if (confirm('Are you sure you want to end your turn?')) {
             goToTimeUp();
         } 
     }
@@ -58,7 +58,7 @@
             <div class="col-8 col-lg-3 mb-3">
                 <div class="card bg-blue" on:click="{() => endTurnPress()}">
                     <div class="py-2 text-center">
-                        <h2 class="c-white mb-0">Stop Beurt <i class="fas fa-chevron-right"></i></h2>
+                        <h2 class="c-white mb-0">End Turn <i class="fas fa-chevron-right"></i></h2>
                     </div>
                 </div>
             </div>

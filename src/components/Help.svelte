@@ -34,9 +34,9 @@
                         <div class="card-body">
                             <div class="row mb-2 justify-content-center">
                                 <div class="col-12">
-                                    <h3 class="text-center">Installeren & Updaten</h3>
-                                    <p class="mb-0">Deze app is te installeren als Progressive Web App, zodat hij zonder 
-                                        internetverbinding is te gebruiken en automatische updates krijgt.
+                                    <h3 class="text-center">Install & Update</h3>
+                                    <p class="mb-0">This app is installable as a Progressive Web App, such that it is 
+                                        usable without internet connection, while receiving updates automatically.
                                     </p>
                                 </div>
                             </div>
@@ -50,9 +50,9 @@
                                     <h5 on:click="{() => {safari = !safari}}"><i class="fab fa-apple"></i> Safari <i class="fas float-end d-inline fa-chevron-down"></i></h5>
                                     <hr>
                                     <ol type="1">
-                                        <li>Klik op het "delen" icoontje</li>
-                                        <li>Klik op "Zet op beginscherm"</li>
-                                        <li>Klik op "Voeg toe"</li>
+                                        <li>CLick on the "sharing" icon</li>
+                                        <li>Click on "Put on startscreen"</li>
+                                        <li>Click on "Add"</li>
                                     </ol>
                                     {/if}
                                 </div>
@@ -66,9 +66,9 @@
                                     <h5 on:click="{() => {chrome = !chrome}}"><i class="fab fa-android"></i> Chrome <i class="fas float-end d-inline fa-chevron-down"></i></h5>
                                     <hr>
                                     <ol type="1">
-                                        <li>Klik op het <i class="fas fa-ellipsis-v"></i> icoontje</li>
-                                        <li>Klik op "App installeren"</li>
-                                        <li>Klik op "Installeren"</li>
+                                        <li>Click on the <i class="fas fa-ellipsis-v"></i> icon</li>
+                                        <li>Click on "Install app"</li>
+                                        <li>Click on "Install"</li>
                                     </ol>
                                     {/if}
                                 </div>
@@ -82,8 +82,8 @@
                                     <h5 on:click="{() => {samsungInternet = !samsungInternet}}"><i class="fab fa-android"></i> Samsung Internet <i class="fas float-end d-inline fa-chevron-down"></i></h5>
                                     <hr>
                                     <ol type="1">
-                                        <li>Klik op het <i class="fas fa-ellipsis-v"></i> icoontje</li>
-                                        <li>Klik op "Toevoegen aan startscherm"</li>
+                                        <li>Click on the <i class="fas fa-ellipsis-v"></i> icon</li>
+                                        <li>Click on "Add to start screen"</li>
                                     </ol>
                                     {/if}
                                 </div>
@@ -99,8 +99,8 @@
                         <div class="card-body">
                             <div class="row mb-2 justify-content-center">
                                 <div class="col-12">
-                                    <h3 class="text-center">Spelen</h3>
-                                    <p class="mb-0">Uitleg over hoe Thirty Seconds te spelen is
+                                    <h3 class="text-center">Play</h3>
+                                    <p class="mb-0">Explanation about how to play 43 seconds
                                     </p>
                                 </div>
                             </div>
@@ -108,16 +108,16 @@
                                 <div class="col-12 text-left">
                                     <hr>
                                     {#if !makeTeams}
-                                    <h5 on:click="{() => {makeTeams = !makeTeams}}">1. Teams maken <i class="fas float-end d-inline fa-chevron-right"></i></h5>
+                                    <h5 on:click="{() => {makeTeams = !makeTeams}}">1. Create teams <i class="fas float-end d-inline fa-chevron-right"></i></h5>
                                     <hr>
                                     {:else}
-                                    <h5 on:click="{() => {makeTeams = !makeTeams}}">1. Teams maken <i class="fas float-end d-inline fa-chevron-down"></i></h5>
+                                    <h5 on:click="{() => {makeTeams = !makeTeams}}">1. Create teams <i class="fas float-end d-inline fa-chevron-down"></i></h5>
                                     <hr>
                                     <p class="">
-                                        Voeg een team toe door de teamnaam in te vullen en op de <i class="fas fa-plus-square"></i> knop te klikken. <br>
-                                        Voeg vervolgens spelers toe door op het team te klikken, de speler naam in te vullen en op de <i class="fas fa-plus-square"></i> knop
-                                        te klikken <br> <br>
-                                        Note: Een team bestaat uit minimaal 2 spelers
+                                        Add a team by filling in the teamname and clicking on the <i class="fas fa-plus-square"></i> button. <br>
+                                        Then add the players by clicking on the team, filling in the player name, and clicking the <i class="fas fa-plus-square"></i> 
+                                        button. <br> <br>
+                                        Note: A team consists of 2 players minimum.
                                     </p>
                                     {/if}
                                 </div>
@@ -125,13 +125,13 @@
                             <div class="row justify-content-center">
                                 <div class="col-12 text-left">
                                     {#if !startGame}
-                                    <h5 on:click="{() => {startGame = !startGame}}">2. Spel starten <i class="fas float-end d-inline fa-chevron-right"></i></h5>
+                                    <h5 on:click="{() => {startGame = !startGame}}">2. Start the game <i class="fas float-end d-inline fa-chevron-right"></i></h5>
                                     <hr>
                                     {:else}
-                                    <h5 on:click="{() => {startGame = !startGame}}">2. Spel starten <i class="fas float-end d-inline fa-chevron-down"></i></h5>
+                                    <h5 on:click="{() => {startGame = !startGame}}">2. Start the game <i class="fas float-end d-inline fa-chevron-down"></i></h5>
                                     <hr>
                                     <p class="">
-                                        Wanneer er minimaal 2 teams van 2 personen zijn, kan het spel gestart worden door op de knop "Start Spel" te klikken. <br>
+                                        When their are at least 2 teams with 2 people, the game can be started by pressing the button "Start game". <br>
                                     </p>
                                     {/if}
                                 </div>

@@ -27,15 +27,15 @@
                         <div class="card-body text-center">
                             <div class="row mb-2 justify-content-center">
                                 <div class="col-12">
-                                    <h5>Woorden</h5>
+                                    <h5>Words</h5>
                                 </div>
                             </div>
                             <div class="row mb-2 justify-content-center">
                                 <div class="col-12">
-                                    <span class="d-block">Danya van Marsbergen <small>(81)</small></span>
-                                    <span class="d-block">Noreen van den Heuvel <small>(27)</small></span>
-                                    <span class="d-block">Mayke Goossens <small>(21)</small></span>
-                                    <span class="d-block">Jip van der Steen <small>(8)</small></span>
+                                    <span class="d-block">No-one <small>(1)</small></span>
+                                    <span class="d-block">No-one <small>(1)</small></span>
+                                    <span class="d-block">No-one <small>(1)</small></span>
+                                    <span class="d-block">No-one <small>(1)</small></span>
                                 </div>
                             </div>
                         </div>

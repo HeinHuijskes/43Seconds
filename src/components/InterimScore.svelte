@@ -6,19 +6,8 @@
     import { fly } from 'svelte/transition';
 
     function startTime() {
-        let counter = 3;
-        window.pushToast(counter);
-
-        let interval = setInterval(function() {
-            counter--;
-            window.pushToast(counter);
-
-            if (counter == 0) {
-                clearInterval(interval);
-                window.clearToasts();
-                nextRound();
-            }
-        }, 1000);
+        window.clearToasts();
+        nextRound();
     }
 
     function nextRound() {
@@ -52,14 +41,14 @@
                 <div class="col-12 col-md-8 col-lg-6 mb-5 text-center">
                     <h1 class="c-white mb-0">Team</h1>
                     <h1 class="c-white mb-0">{getOrderedTeams()[0].name}</h1>
-                    <h1 class="c-white mb-0"><i class="fas fa-award"></i> Heeft Gewonnen! <i class="fas fa-award"></i></h1>
+                    <h1 class="c-white mb-0"><i class="fas fa-award"></i> Has Won! <i class="fas fa-award"></i></h1>
                 </div>
             </div>
                 <div class="row justify-content-center pt-3">
                     <div class="col-8 col-lg-3 mb-3">
                     <div class="card bg-red" on:click="{() => endGame()}">
                         <div class="py-2 text-center">
-                            <h2 class="c-white mb-0">Einde</h2>
+                            <h2 class="c-white mb-0">The End</h2>
                         </div>
                     </div>
                 </div>
@@ -67,8 +56,8 @@
             {:else}
             <div class="row justify-content-center pt-3">
                 <div class="col-12 col-md-8 col-lg-6 mb-5 text-center">
-                    <h1 class="c-white mb-0">Geef mij</h1>
-                    <h1 class="c-white mb-0">door aan</h1>
+                    <h1 class="c-white mb-0">Hand me</h1>
+                    <h1 class="c-white mb-0">over to</h1>
                     <h1 class="c-white mb-0">{getCurrentPlayer().name}</h1>
                 </div>
             </div>
@@ -76,7 +65,7 @@
                 <div class="col-12 col-md-8 col-lg-6 mb-3">
                     <div class="card bg-blue" on:click="{() => startTime()}">
                         <div class="card-body text-center">
-                            <h2 class="c-white mb-0">Start de tijd</h2>
+                            <h2 class="c-white mb-0">Start the time</h2>
                         </div>
                     </div>
                 </div>
@@ -86,8 +75,8 @@
                 <div class="col-12 col-md-8 col-lg-6">
                     <div class="card">
                         <div class="card-body text-center c-purple">
-                            <h5 class="d-inline">Ronde {getGameRound()} <small>({ getTurn() +1 }/{$game.teams.length})</small> </h5>
-                            <h6 class="separator mb-4">de stand</h6>
+                            <h5 class="d-inline">Round {getGameRound()} <small>({ getTurn() +1 }/{$game.teams.length})</small> </h5>
+                            <h6 class="separator mb-4">the score</h6>
                             {#each getOrderedTeams() as team, i}
                             {#if team.name == getCurrentTeam().name && getOrderedTeams()[0].points < $settings.pointsToWin}
                             <h5 class="float-start d-inline">{i+1} {team.name} <i class="far fa-play-circle"></i></h5>

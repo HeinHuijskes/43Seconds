@@ -29,7 +29,7 @@
         </div>
         <div class="row">
             <div class="col-12 text-center">
-                <h1 class="c-white">Instellingen</h1>
+                <h1 class="c-white">Settings</h1>
             </div>
         </div>
     
@@ -41,7 +41,7 @@
                         <div class="card-body">
                             <div class="row mb-2 justify-content-center">
                                 <div class="col-12">
-                                    <label for="pointsGoal" class="form-label">Punten Doel:</label>
+                                    <label for="pointsGoal" class="form-label">Points goal:</label>
                                     <input inputmode="numeric" pattern="[0-9]*" type="number" class="form-control" id="pointsGoal" bind:value="{$settings.pointsToWin}"
                                     on:change="{() => changeGoal()}">
                                 </div>
@@ -64,7 +64,7 @@
                 <div class="col-12 col-md-8 col-lg-6 mb-3">
                     <div class="card bg-red" on:click="{() => endGame()}">
                         <div class="card-body text-center">
-                            <h3 class="c-white mb-0">Beeindig Spel</h3>
+                            <h3 class="c-white mb-0">End Game</h3>
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                 <div class="col-12 col-md-8 col-lg-6 mb-3">
                     <div class="card bg-red" on:click="{() => setDefaultSettings()}">
                         <div class="card-body text-center">
-                            <h3 class="c-white mb-0">Standaardinstellingen</h3>
+                            <h3 class="c-white mb-0">Standard Settings</h3>
                         </div>
                     </div>
                 </div>

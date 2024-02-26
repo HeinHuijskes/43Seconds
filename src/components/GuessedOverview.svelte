@@ -32,8 +32,8 @@ function changePoints(inputEvent) {
         </div>
         <div class="row justify-content-center pt-3">
             <div class="col-12 mb-5 text-center">
-                <h5 class="c-white">Selecteer de</h5>
-                <h5 class="c-white">geraden woorden</h5>
+                <h5 class="c-white">Select the</h5>
+                <h5 class="c-white">guessed words</h5>
             </div>
         </div>
         <div class="row justify-content-center pt-3">
@@ -69,7 +69,7 @@ function changePoints(inputEvent) {
                 <div class="col-12 col-md-8 col-lg-6 mt-3">
                     <div class="card bg-blue" on:click="{() => {currentGameScreen.set(InterimScore); goToNextRound()}}">
                         <div class="card-body text-center">
-                            <h2 class="c-white mb-0">Verder <i class="fas fa-chevron-right"></i></h2>
+                            <h2 class="c-white mb-0">Move on <i class="fas fa-chevron-right"></i></h2>
                         </div>
                     </div>
                 </div>

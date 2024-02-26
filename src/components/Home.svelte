@@ -49,7 +49,7 @@ import { teams, saveTeamsToLocalStorage } from '../stores/homeStores.js'
     
     function addTeam() {
         if(newTeamName.length < 1) {
-            window.pushToast("Vul een Team naam in");
+            window.pushToast("Fill in a team name");
             return;
         }
 
@@ -70,14 +70,14 @@ import { teams, saveTeamsToLocalStorage } from '../stores/homeStores.js'
         let canStart = true;
         if($teams.length < 2){
             canStart = false;
-            window.pushToast("Er zijn minimaal 2 teams nodig om te starten");
+            window.pushToast("There must be 2 teams or more to start the game");
             return;
         }
 
         $teams.forEach(team => {
             if(team.players.length < 2) {
                 canStart = false;
-                window.pushToast("Team "+team.name+" heeft minder dan 2 spelers");
+                window.pushToast("Team "+team.name+" has less than 2 players");
                 return;
             }
         })
@@ -126,7 +126,7 @@ import { teams, saveTeamsToLocalStorage } from '../stores/homeStores.js'
         </div>
         <div class="row">
             <div class="col-12 text-center">
-                <h1 class="c-white">Thirty Seconds</h1>
+                <h1 class="c-white">43 Seconds</h1>
             </div>
         </div>
     </div>
@@ -137,9 +137,9 @@ import { teams, saveTeamsToLocalStorage } from '../stores/homeStores.js'
                     <div class="card mb-3">
                         <div class="card-body">
                             <div class="row mb-2">
-                                <div class="col-12"><h5 class="text-center">Team Toevoegen</h5></div>
+                                <div class="col-12"><h5 class="text-center">Add Team</h5></div>
                                 <div class="col-12">
-                                    <input class="form-control" type="text" bind:value="{newTeamName}" placeholder="Team Naam">
+                                    <input class="form-control" type="text" bind:value="{newTeamName}" placeholder="Team Name">
                                 </div>
                             </div>
                             <div class="row justify-content-center">
@@ -168,7 +168,7 @@ import { teams, saveTeamsToLocalStorage } from '../stores/homeStores.js'
                 <div class="col-12 col-md-8 col-lg-6">
                     <div class="card bg-blue" on:click="{() => resumeGame()}">
                         <div class="card-body text-center">
-                            <h2 class="c-white mb-0">Herstel Spel</h2>
+                            <h2 class="c-white mb-0">Resume Game</h2>
                             <span class="c-white">{getResumeGameDateString($game.started)}</span>
                         </div>
                     </div>
@@ -180,7 +180,7 @@ import { teams, saveTeamsToLocalStorage } from '../stores/homeStores.js'
                 <div class="col-12 col-md-8 col-lg-6">
                     <div class="card bg-blue" on:click="{() => startGame()}">
                         <div class="card-body text-center">
-                            <h2 class="c-white mb-0">Nieuw Spel</h2>
+                            <h2 class="c-white mb-0">New Game</h2>
                         </div>
                     </div>
                 </div>

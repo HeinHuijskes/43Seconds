@@ -14,7 +14,7 @@
     
     function addPlayer(teamIndex) {
         if(newTeamMemberName.length < 1) {
-            window.pushToast("Vul een Speler naam in");
+            window.pushToast("Fill in a player name");
             return;
         }
 
@@ -47,10 +47,10 @@
             <div class="card-body">
                 {#if playersVisible}
                 <h3 class="d-inline mb-0 float-start"><div class="d-inline" on:click="{() => {removeTeam(index)}}"><i class="fas fa-trash-alt c-red"></i></div> {$teams[index].name}</h3>
-                <h3 class="d-inline mb-0 float-end" on:click="{() => {playersVisible = !playersVisible; saveTeamsToLocalStorage()}}">{$teams[index].players.length || 0} spelers <i class="fas fa-chevron-down"></i></h3>
+                <h3 class="d-inline mb-0 float-end" on:click="{() => {playersVisible = !playersVisible; saveTeamsToLocalStorage()}}">{$teams[index].players.length || 0} players <i class="fas fa-chevron-down"></i></h3>
                 {:else}
                 <h3 class="d-inline mb-0 float-start">{$teams[index].name}</h3>
-                <h3 class="d-inline mb-0 float-end" on:click="{() => {playersVisible = !playersVisible; saveTeamsToLocalStorage() }}">{$teams[index].players.length || 0} spelers <i class="fas fa-chevron-right"></i></h3>
+                <h3 class="d-inline mb-0 float-end" on:click="{() => {playersVisible = !playersVisible; saveTeamsToLocalStorage() }}">{$teams[index].players.length || 0} players <i class="fas fa-chevron-right"></i></h3>
                 {/if}
 
                 {#if playersVisible}
@@ -58,7 +58,7 @@
                 <hr>
                 <div class="row mb-3">
                     <div class="col-8 col-md-10">
-                        <input class="form-control" type="text" bind:value="{newTeamMemberName}" placeholder="Speler Naam">
+                        <input class="form-control" type="text" bind:value="{newTeamMemberName}" placeholder="Player Name">
                     </div>
                     <div class="col-4 col-md-2">
                         <button class="btn bg-blue w-100"
