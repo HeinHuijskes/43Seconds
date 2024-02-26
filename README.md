@@ -21,15 +21,18 @@ Time Up                        |           Select         |     Score   |
 All contributions are welcome
 
 If you have something to add - anything from a typo through to a whole new feature, please create a pull request or issue.
+
+#### Additions by Hein
+Changes to the base game from `https://github.com/TheMardy/ThirtySeconds`:
+ - Translated from Dutch to English
+ - Removed timer before a turn (due to a bug when clicking "next" multiple times)
+ - Changed to 43 seconds
+ - Changed categories to be specific to Dies 43
+ - Added python csv parser for words lists
+ - Removed excess texts and such
+ - Other things that I forgot
  
 ## Developing, Building and running in production mode
-
-#### Addition by Hein
-##### If you get an error similar to 
-```
-Package subpath './compiler.js' is not defined by "exports" in {path to temp/node_modules/svelte/package.json}
-```
-##### Then navigate to ```package.json```, and change the value of ```"rollup-plugin-svelte"``` to ```"^6.1.1",```. Then run ```npm install``` again.
 
 ##### After cloning, install all NPM packages:
 ```bash
