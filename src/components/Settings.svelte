@@ -6,17 +6,6 @@
    function changeGoal(){
        saveSettings();
    }
-
-   async function forceSWupdate () {
-        if ('serviceWorker' in navigator) {
-            await navigator.serviceWorker.getRegistrations().then(async function (registrations) {
-                for (let registration of registrations) {
-                    await registration.update();
-                }
-            })
-        }
-        window.location.reload(true);
-    }
     </script>
     
     <div class="container-fluid pt-2 vh-100 bg-purple" in:fly >
@@ -83,12 +72,10 @@
             <div class="row mb-4 mt-5">
                 <div class="col-12 c-white text-center">
                     <button on:click="{() => {currentGameScreen.set(Credits)}}" class="btn btn-small bg-blue c-white d-block mx-auto mb-2"><i class="fas fa-crown"></i> Wall of Fame <i class="fas fa-crown"></i></button>
-                    <a href="https://github.com/TheMardy/ThirtySeconds/releases" class="text-decoration-underline c-white" target="_blank">Version: _VERSION</a>
-                    <div on:click="{() => forceSWupdate()}" class="d-inline">
-                        <i class="fas fa-sync-alt"></i>
-                    </div><br>
+                    <a href="https://github.com/HeinHuijskes/43Seconds" class="white-link" target="_blank">GitHub Link</a>
                     
-                    <h6>Made with <i class="fas fa-heart mt-4"></i> by <a href="https://github.com/TheMardy" target="_blank">Mardy</a></h6>
+                    <h6>Made with <i class="fas fa-heart mt-4"></i> by <a class="white-link" href="https://github.com/TheMardy" target="_blank">Mardy</a></h6>
+                    <h6>Adapted for the 43rd Dies of <a class="white-link" href="https://www.inter-actief.utwente.nl/" target="_blank">Inter-<i>Actief</i></a> by <a class="white-link" href="https://github.com/HeinHuijskes" target="_blank">Hein</a></h6>
                 </div>
             </div>
     </div>
@@ -97,7 +84,9 @@
     
     <style>
       .fa-heart {
-          color:#d60000;
+        color:#d60000;
       }
-     
+      .white-link {
+        color: white;
+      }
     </style>

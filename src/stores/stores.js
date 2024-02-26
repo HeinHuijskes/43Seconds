@@ -1,7 +1,7 @@
 import { writable, get } from 'svelte/store';
 import Home from '../components/Home.svelte';
 
-const defaultSettings = {pointsToWin: 30};
+const defaultSettings = {pointsToWin: 43};
 
 export const currentGameScreen = writable(null);
 export const prevGameScreen = writable(null);
